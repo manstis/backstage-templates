@@ -1,64 +1,41 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
 metadata:
-  name: software-templates
+  name: actions_workflow
+  title: actions_workflow
+  description: An example of how a workflow can call actions on BS Scaffolder
+  tags:
+  - experimental
+  - swf
   annotations:
-    github.com/project-slug: backstage/software-templates
+    backstage.io/managed-by-location: url:http://localhost:8899
+    backstage.io/managed-by-origin-location: url:http://localhost:8899
+    backstage.io/source-location: url:http://localhost:8899/management/processes/actions_workflow/source
+    backstage.io/view-url: http://localhost:8899/management/processes/actions_workflow/source
 spec:
-  type: other
-  lifecycle: unknown
-  owner: backstage{
-  "apiVersion": "scaffolder.backstage.io/v1beta3",
-  "kind": "Template",
-  "metadata": {
-    "name": "actions_workflow",
-    "title": "actions_workflow",
-    "description": "An example of how a workflow can call actions on BS Scaffolder",
-    "tags": [
-      "experimental",
-      "swf"
-    ],
-    "annotations": {
-      "backstage.io/managed-by-location": "url:http://localhost:8899",
-      "backstage.io/managed-by-origin-location": "url:http://localhost:8899",
-      "backstage.io/source-location": "url:http://localhost:8899/management/processes/actions_workflow/source",
-      "backstage.io/view-url": "http://localhost:8899/management/processes/actions_workflow/source"
-    }
-  },
-  "spec": {
-    "owner": "swf@example.com",
-    "type": "serverless-workflow",
-    "steps": [],
-    "parameters": {
-      "title": "Fill in some input parameters",
-      "required": [
-        "entityRef"
-      ],
-      "properties": {
-        "defaultNamespace": {
-          "description": "The default namespace",
-          "type": "string"
-        },
-        "defaultKind": {
-          "description": "The default kind",
-          "type": "string"
-        },
-        "entityRefs": {
-          "description": "Entity references of the entities to get",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "optional": {
-          "description": "Allow the entity or entities to optionally exist. Default: false",
-          "type": "boolean"
-        },
-        "entityRef": {
-          "description": "Entity reference of the entity to get",
-          "type": "string"
-        }
-      }
-    }
-  }
-}
+  owner: swf@example.com
+  type: serverless-workflow
+  steps: []
+  parameters:
+    title: Fill in some input parameters
+    required:
+    - entityRef
+    properties:
+      defaultNamespace:
+        description: The default namespace
+        type: string
+      defaultKind:
+        description: The default kind
+        type: string
+      entityRefs:
+        description: Entity references of the entities to get
+        type: array
+        items:
+          type: string
+      optional:
+        description: 'Allow the entity or entities to optionally exist. Default: false'
+        type: boolean
+      entityRef:
+        description: Entity reference of the entity to get
+        type: string
+
