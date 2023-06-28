@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: actions_workflow
-  title: actions_workflow
-  description: An example of how a workflow can call actions on BS Scaffolder
+  name: test_workflow
+  title: test_workflow
+  description: This is unlikely to appear
   tags:
   - experimental
   - swf
