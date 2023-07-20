@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: backstage-templates
-  description: ansible-description
+  description: ansible-description3
   annotations:
     backstage.io/kubernetes-id: backstage-templates
     backstage.io/techdocs-ref: dir:.
