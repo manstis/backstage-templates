@@ -1,9 +1,0 @@
----
-apiVersion: tower.ansible.com/v1alpha1
-kind: AnsibleJob
-metadata:
-  name: ansible-job-job
-  namespace: aap
-spec:
-  connection_secret: aapaccess
-  job_template_name: ansible-template
