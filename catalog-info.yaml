@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-templates
+  description: ansible-description
+  annotations:
+    backstage.io/kubernetes-id: backstage-templates
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: manstis/backstage-templates
+spec:
+  type: api
+  system: 
+  lifecycle: production
+  owner: manstis
